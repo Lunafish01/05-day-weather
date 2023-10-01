@@ -3,12 +3,11 @@
 } */
 
 *{
-    font-family: 'Croissant One', cursive;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* body{
-
-} */
+body {
+    font-family: 'Roboto', sans-serif;
+}
