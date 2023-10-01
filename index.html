@@ -10,11 +10,31 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
-        <h1>5 Day Weather Forecast</h1>
-    </header>
+  <h1>5-Day Weather forecast</h1>
+  <div class="container">
+    <div class="weather-input">
+        <h3>Search Location</h3>
+        <input type="text" placeholder="Location Name"> 
+        <button class="search-btn">Search</button>
+    </div>
+  </div> 
+  <div class="weather-info">
+    <div class="current-weather">
+        <div class="details">
+            <h2>San Antonio (10-01-2023)</h2>
+            <h4>Temperature: 93°F</h4>
+            <h4>Wind: 10 MPH</h4>
+            <h4>Humidity: 45%</h4>
+        </div>
+        <div class="icon">
+            <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weather icon" />
+            <h4>Mostly Cloudy</h4>
+        </div>
+    </div>
+  </div>
+  
     
-    <div class="search">
+    <!-- <div class="search">
         <h2>Search location</h2>
         <form id="search-bar">
             <p id="input-field">
@@ -85,6 +105,6 @@
 
         </div>
             
-    </aside>
+    </aside> -->
 </body>
 </html>
