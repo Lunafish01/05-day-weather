@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="styelsheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <header>
@@ -24,5 +24,67 @@
         </form>
         <ul class="search-history"></ul>
     </div>
+
+    <main id="search-results">
+        <h2 id="location-name"></h2>
+        <p id="pForecast" class="weather">What's the weather like?</p>
+        <div id="current-forecast" class="current-weather">
+            <p id="temp" class="pTemp"></p>
+            <p id="wind" class="pWind"></p>
+            <p id="humidity" class="pHumidity"></p>
+        </div>
+    </main>
+
+    <aside>
+        <h3 id="weather-forecast" style="display: none">5-Day Weather Report</h3>
+        <div id="weather-container">
+            <div class="weather-cards">
+                <p class="weather day-1"></p>
+            </div>
+            <div>
+                <p class="temp" id="pTemp-1"></p>
+                <p class="wind" id="pWind-1"></p>
+                <p class="humidity" id="phumidity-1"></p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="weather day-2"></p>
+            </div>
+            <div>
+                <p class="temp" id="pTemp-2"></p>
+                <p class="wind" id="pWind-2"></p>
+                <p class="humidity" id="phumidity-2"></p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="weather day-3"></p>
+            </div>
+            <div>
+                <p class="temp" id="pTemp-3"></p>
+                <p class="wind" id="pWind-3"></p>
+                <p class="humidity" id="phumidity-3"></p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="weather day-4"></p>
+            </div>
+            <div>
+                <p class="temp" id="pTemp-4"></p>
+                <p class="wind" id="pWind-4"></p>
+                <p class="humidity" id="phumidity-4"></p>
+            </div>
+
+            <div class="weather-cards">
+                <p class="weather day-5"></p>
+            </div>
+            <div>
+                <p class="temp" id="pTemp-5"></p>
+                <p class="wind" id="pWind-5"></p>
+                <p class="humidity" id="phumidity-5"></p>
+            </div>
+
+        </div>
+            
+    </aside>
 </body>
 </html>
