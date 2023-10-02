@@ -10,11 +10,12 @@ body {
 }
 
 h1 {
-    color:antiquewhite;
+    color:white;
     padding: 15px 0;
     text-align: center;
     background: lightseagreen;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: bolder;
 }
 
 .container {
@@ -48,6 +49,11 @@ h1 {
     background-color: lightseagreen;   
 }
 
+.weather-input .search-btn:hover {
+    background: bisque;
+}
+
+
 .weather-info{
     width: 100%;
 }
@@ -56,13 +62,19 @@ h1 {
     background: lightseagreen;
     display: flex; 
     border-radius: 5px;
-    padding: 20px 70px 20px 20px;
-    color: whitesmoke;
+    box-shadow: 5px 5px grey;
+    padding: 30px 100px;
+    color: white;
+    font-size: 30px;
     justify-content: space-between;
 }
 
 .current-weather h2 {
     font-size: 20px;
+}
+
+.details h2 {
+    font-size: 30px;
 }
 
 .weather-info h4 {
@@ -71,7 +83,30 @@ h1 {
     font-weight: 400;
 }
 
-.current-weather .icon{
-    max-width: 12opx;
+.current-weather .icon {
+    text-align: center;
+    max-width: 100%;
     margin-top:-15px;
+}
+
+.days-weather h2 {
+    margin: 20px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.days-weather .weather-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.weather-cards .card {
+    padding: 20px 18px;
+    color: white;
+    font-size: 25px;
+    background: lightseagreen;
+    border-radius: 5px;
+    border: 5px;
+    box-shadow: 5px 5px grey; 
+    list-style: none;
 }
