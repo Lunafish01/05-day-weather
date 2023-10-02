@@ -26,11 +26,9 @@ function getFiveDayWeather(location) {
         return response.json();
     })
     .then(function(data) {
-        displayCurrentWeather(data);
-        getFiveDayWeather(LocationName);
-    });
+        weatherCardEl.textContent = "";
+    }
 }
-
 //create fetch request to get current location up to date weather
 function getCurrentWeather(location) {
     var requestUrl = "https://api.example.com/weather?location=" + location;
