@@ -35,4 +35,8 @@
 
 ## Link to deployed application 
 
+[05-Day-Weather App link](https://lunafish01.github.io/05-day-weather/)
+
 ## Screenshot of application
+
+![Alt text](<Screenshot 2023-10-02 at 11.53.09 PM.png>)

@@ -101,5 +101,4 @@ function displayForecast(forecastData) {
 
         ul.appendChild(card);
     }
-    
 }
