@@ -5,6 +5,7 @@ var searchButton = document.querySelector(".search-btn");
 var currentWeatherEl = document.querySelector(".current-weather");
 var weatherCardsEl = document.querySelector(".weather-cards");
 
+console.log(searchButton);
 searchButton.addEventListener("click", function() {
     var location = locationInfo.value;
     getCurrentWeather(location)
@@ -16,21 +17,19 @@ searchButton.addEventListener("click", function() {
             displayForecast(forecastData);
             currentWeatherEl.removeAttribute("style");
         })
-        // .catch(function(error) {
-        //     console.error("Error fetching weather data: " + error);
-        // });
 });
 
 function getCurrentWeather(location) {
     var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
     return fetch(requestUrl)
         .then(function(response) {
+            console.log(response)
             return response.json();
         });
 }
 
 function getFiveDayWeather(location) {
-    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&cnt=5&units=imperial&appid=${apiKey}`;
+    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&cnt=8&units=imperial&appid=${apiKey}`;
     return fetch(requestUrl)
         .then(function(response) {
             return response.json();
