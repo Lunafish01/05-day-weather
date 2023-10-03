@@ -41,9 +41,14 @@ function getFiveDayWeather(location) {
 
 function displayCurrentWeather(data) {
     currentWeatherEl.querySelector("h2").textContent = data.name;
+    currentWeatherEl.querySelector("h2").style.fontSize = "30px"
     currentWeatherEl.querySelector("h4:nth-child(2)").textContent = "Temperature: " + data.main.temp + "°F";
+    currentWeatherEl.querySelector("h4:nth-child(2)").style.fontSize = "30px"
     currentWeatherEl.querySelector("h4:nth-child(3)").textContent = "Wind: " + data.wind.speed + " MPH";
+    currentWeatherEl.querySelector("h4:nth-child(3)").style.fontSize = "30px"
     currentWeatherEl.querySelector("h4:nth-child(4)").textContent = "Humidity: " + data.main.humidity + "%";
+    currentWeatherEl.querySelector("h4:nth-child(4)").style.fontSize = "30px"
+
 }
 
 var forecastData = [];
@@ -60,7 +65,7 @@ for (var i = 0; i < forecastData.length; i++) {
         <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png" alt="weather icons" />
         Temperature: ${forecast.main.temp}°F
         Wind: ${forecast.wind.speed} MPH
-        Humidity: ${forecast.main.humidity}%
+        Humidity: ${forecast.main.humidity}% 
     `;
     
     card.innerHTML = cardContent;
