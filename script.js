@@ -68,6 +68,7 @@ var ul = document.createElement("ul");
 
 //get 5 day forecast data and update html elements
 //unable to update 'li' elements with 5 day forecast
+//weather icons are not generating from api
 function displayForecast(forecastData) {
     console.log(forecastData);
     ul.textContent = ''; 
