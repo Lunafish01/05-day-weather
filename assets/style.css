@@ -68,6 +68,16 @@ h1 {
     background: lightseagreen;
 }
 
+.search-history {
+    width: 100%;
+    max-width: 550px; 
+    height: auto; 
+    outline: none;
+    padding: 0 15px;
+    margin: 10px 0;
+    font-size: 20px;
+    display: none; 
+}
 
 .weather-info{
     width: 100%;
