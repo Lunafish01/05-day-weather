@@ -46,19 +46,23 @@ function displayCurrentWeather(data) {
     currentWeatherEl.querySelector("h4:nth-child(4)").textContent = "Humidity: " + data.main.humidity + "%";
 }
 
-function displayForecast(forecastData) {
-    weatherCardsEl.textContent = ''; 
+var forecastData = [];
+var ul = document.querySelector('ul'); 
 
-    forecastData.forEach(function(forecast) {
-        var card = document.createElement('li');
-        card.classList.add('card');
-        card.textContent = `
-            <h3>${forecast.dt_txt}</h3>
-            <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png" alt="weather icons" />
-            <h4>Temperature: ${forecast.main.temp}°F</h4>
-            <h4>Wind: ${forecast.wind.speed} MPH</h4>
-            <h4>Humidity: ${forecast.main.humidity}%</h4>
-        `;
-        weatherCardsEl.appendChild(card);
-    });
+for (var i = 0; i < forecastData.length; i++) {
+    var forecast = forecastData[i];
+    
+    var card = document.createElement('li');
+    card.classList.add('card');
+    
+    var cardContent = `
+        ${forecast.dt_txt}
+        <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png" alt="weather icons" />
+        Temperature: ${forecast.main.temp}°F
+        Wind: ${forecast.wind.speed} MPH
+        Humidity: ${forecast.main.humidity}%
+    `;
+    
+    card.innerHTML = cardContent;
+    ul.appendChild(card);
 }
