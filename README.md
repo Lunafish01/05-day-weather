@@ -14,6 +14,8 @@
 
 - Before I could complete the application, I was unable to get the local storage to save the users search history.
 
+- I'll continue to work on this to attempt to get the JS to work correctly and fix the search history bug.
+
 
 ## Acceptance Criteria
 
