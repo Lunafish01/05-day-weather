@@ -6,7 +6,9 @@
 
 - The open weather API was also used to create a 5 day weather forecast to show the date and weather for the next 5 days in the specifically searched location.
 
-- I styled the page using fundamental CSS rules and as well as setting the font family to Roboto using a Google Fonts Library 
+- I styled the page using fundamental CSS rules and as well as setting the font family to 'Roboto' using a Google Fonts Library 
+
+## Set-Backs
 
 - I did run into some issues trying to build out the JavaScript for the 5 day weather forecast, as it will not load to the page when searching the speicifally requested location, although the current weather function does work
 
