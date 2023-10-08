@@ -35,7 +35,7 @@ function getCurrentWeather(location) {
 //write function to fetch 5 day forecast of searched location 
 //insert weather api url
 function getFiveDayWeather(location) {
-    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial&appid=${apiKey}`;
+    var requestUrl = `api.openweathermap.org/data/2.5/forecast/daily?zip={78209},{us}&cnt=5&appid={apiKey}`;
     return fetch(requestUrl)
         .then(function(response) {
             return response.json();
@@ -69,7 +69,6 @@ var ul = document.createElement("ul");
 //get 5 day forecast data and update html elements
 //unable to update 'li' elements with 5 day forecast
 //weather icons are not generating from api
-console.log(forecastData);
 function displayForecast(forecastData) {
 var cards = document.querySelectorAll(".weather-cards .cards")
 
