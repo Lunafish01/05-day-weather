@@ -35,7 +35,7 @@ function getCurrentWeather(location) {
 //write function to fetch 5 day forecast of searched location 
 //insert weather api url
 function getFiveDayWeather(location) {
-    var requestUrl = `api.openweathermap.org/data/2.5/forecast/daily?zip={78209},{us}&cnt=5&appid={apiKey}`;
+    var requestUrl = `api.openweathermap.org/data/2.5/forecast/daily?zip={78209},{us}&cnt=5&appid=${apiKey}`;
     return fetch(requestUrl)
         .then(function(response) {
             return response.json();
