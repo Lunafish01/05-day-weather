@@ -69,36 +69,27 @@ var ul = document.createElement("ul");
 //get 5 day forecast data and update html elements
 //unable to update 'li' elements with 5 day forecast
 //weather icons are not generating from api
+console.log(forecastData);
 function displayForecast(forecastData) {
-    console.log(forecastData);
-    ul.textContent = ''; 
+var cards = document.querySelectorAll(".weather-cards .cards")
 
-    for(var i = 0; i < forecastData.length; i++) {
+    for(var i = 0; i < forecastData.length && i < cards.length; i++) {
         var forecast = forecastData[i];
+        var card = cards[i];
 
-        var card = document.createElement("li");
-        card.classList.add("card");
-
-        var dateEl = document.createElement("p");
+        var dateEl = card.querySelector("h3");
         dateEl.textContent = forecast.dt_txt;
-        card.appendChild(dateEl);
 
-        var iconEl = document.createElement("img");
-        iconEl.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`; 
-        card.appendChild(iconEl);
+        var iconEl = card.querySelector("img");
+        iconEl.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
 
-        var tempEl = document.createElement("p");
+        var tempEl = card.querySelectorAll("h4")[0];
         tempEl.textContent = "Temperature: " + forecast.main.temp + "°F";
-        card.appendChild(tempEl);
 
-        var windEl = document.createElement("p");
+        var windEl = card.querySelectorAll("h4")[1];
         windEl.textContent = "Wind " + forecast.wind.speed + " Mph";
-        card.appendChild(windEl);
 
-        var humidityEl = document.createElement("p");
+        var humidityEl = card.querySelectorAll("h4")[2];
         humidityEl.textContent = "Humidity: " + forecast.main.humidity + "%";
-        card.appendChild(humidityEl);
-
-        ul.appendChild(card);
     }
 }
